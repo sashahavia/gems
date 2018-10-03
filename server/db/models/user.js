@@ -3,10 +3,20 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const User = db.define('user', {
+  firstName: {
+    type: Sequelize.STRING,
+    defaultValue: 'Batman'
+  },
+  lastName: {
+    type: Sequelize.STRING,
+    defaultValue: 'Marvel'
+  },
   email: {
     type: Sequelize.STRING,
     unique: true,
-    allowNull: false
+    validate: {
+      isEmail: true
+    }
   },
   password: {
     type: Sequelize.STRING,
@@ -26,6 +36,21 @@ const User = db.define('user', {
   },
   googleId: {
     type: Sequelize.STRING
+  },
+  facebookId: {
+    type: Sequelize.STRING
+  },
+  isAdmin: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false
+  },
+  isGuest: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: true
+  },
+  userImage: {
+    type: Sequelize.STRING,
+    defaultValue: 'https://images.emojiterra.com/mozilla/512px/1f48e.png'
   }
 })
 
