@@ -3,7 +3,7 @@ const db = require('../db')
 
 const Address = db.define('address', {
   addressStreet: {
-    type: Sequelize.String,
+    type: Sequelize.STRING,
     validate: {
       len: [5, 100]
     }
