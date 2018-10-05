@@ -20,6 +20,10 @@ const Product = db.define('product', {
     type: Sequelize.INTEGER,
     defaultValue: 0
   },
+  size: {
+    type: Sequelize.ENUM,
+    values: ['2 mm', '2.5 mm', '3 mm', '3.5 mm', '4 mm', '4.5 mm', '5 mm']
+  },
   color: {
     type: Sequelize.ENUM,
     values: [
