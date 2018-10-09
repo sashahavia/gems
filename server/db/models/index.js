@@ -1,10 +1,14 @@
 const User = require('./user')
 const Order = require('./order')
 const Product = require('./product')
+const Category = require('./category')
 const Photo = require('./photo')
 const Review = require('./review')
 const Address = require('./address')
 const OrderProducts = require('./orderproducts')
+
+Product.belongsTo(Category)
+Category.hasMany(Product)
 
 Review.belongsTo(Product)
 Product.hasMany(Review)

@@ -3,10 +3,10 @@ const db = require('../db')
 
 const OrderProducts = db.define('OrderProducts', {
   productPrice: {
-    type: Sequelize.DOUBLE
+    type: Sequelize.DECIMAL(13, 2)
   },
   regularPrice: {
-    type: Sequelize.DOUBLE
+    type: Sequelize.DECIMAL(13, 2)
   },
   productQuantity: {
     type: Sequelize.INTEGER

@@ -10,7 +10,7 @@ const Product = db.define('product', {
     type: Sequelize.TEXT
   },
   price: {
-    type: Sequelize.DOUBLE,
+    type: Sequelize.DECIMAL(13, 2),
     allowNull: false,
     validate: {
       min: 0.01
