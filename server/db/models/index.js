@@ -34,5 +34,7 @@ module.exports = {
   Photo,
   Product,
   Review,
-  User
+  User,
+  Category,
+  Address
 }
