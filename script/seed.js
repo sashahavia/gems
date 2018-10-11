@@ -154,6 +154,16 @@ const products = [
     color: 'Brown',
     size: '4.5 mm',
     categoryId: 3
+  },
+  {
+    title: 'Flower Agate',
+    description:
+      'Dendritic agate is a translucent, colorless to whitish-gray variety of chalcedony quartz, easily distinguished by its distinct tree- or fern-like markings known as "dendrites", which are most often brown to black in color.',
+    price: 15.23,
+    stock: 0,
+    color: 'Brown',
+    size: '4 mm',
+    categoryId: 3
   }
 ]
 

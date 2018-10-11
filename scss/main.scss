@@ -1,0 +1,24 @@
+@import 'normalize';
+
+body {
+  font-family: sans-serif;
+  // background: grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+nav a {
+  display: inline-block;
+  margin: 1em;
+}
+
+form div {
+  margin: 1em;
+  display: inline-block;
+}
