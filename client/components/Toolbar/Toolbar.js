@@ -8,6 +8,7 @@ const toolbar = props => (
       <div className="logo">
         <a href="/">Gems</a>
       </div>
+      <div className="spacer" />
       <div className="nav-items">
         <ul>
           <li>

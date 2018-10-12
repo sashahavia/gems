@@ -9,7 +9,7 @@ const App = () => {
     <div>
       {/* <Navbar /> */}
       <Toolbar />
-      <main styles={{marginTop: '64px'}}>
+      <main style={{marginTop: '65px'}}>
         <Routes />
       </main>
     </div>
