@@ -1,10 +1,15 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
+
+import './toolbar.scss';
 
 const toolbar = props => (
   <header className="toolbar">
     <nav className="toolbar-navigation">
-      <div />
+      <div>
+        <DrawerToggleButton click={props.drawerClickHandler} />
+      </div>
       <div className="logo">
         <a href="/">Gems</a>
       </div>
@@ -21,6 +26,6 @@ const toolbar = props => (
       </div>
     </nav>
   </header>
-)
+);
 
-export default toolbar
+export default toolbar;

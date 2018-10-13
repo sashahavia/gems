@@ -26,6 +26,10 @@ $nav_teal: #008081;
   padding: 0 1rem;
 }
 
+.logo {
+  margin-left: 1rem;
+}
+
 .logo a {
   font-size: 2rem;
   text-decoration: none;
@@ -55,4 +59,27 @@ $nav_teal: #008081;
 .nav-items a:hover,
 .nav-items a:active {
   color: $nav_teal;
+}
+
+// toggle button
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button-line {
+  width: 30px;
+  height: 2px;
+  background: $nav_text;
 }
