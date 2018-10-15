@@ -10,6 +10,12 @@ $nav_teal: #008081;
   width: 70%;
   max-width: 400px;
   z-index: 200;
+  transform: translateX(-120%);
+  transition: transform 0.3s ease-out;
+}
+
+.side-drawer.open {
+  transform: translateX(0);
 }
 
 .side-drawer ul {
@@ -32,4 +38,10 @@ $nav_teal: #008081;
 .side-drawer a:hover,
 .side-drawer a:active {
   color: $nav_teal;
+}
+
+@media (min-width: 769px) {
+  .side-drawer {
+    display: none;
+  }
 }

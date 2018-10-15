@@ -83,3 +83,19 @@ $nav_teal: #008081;
   height: 2px;
   background: $nav_text;
 }
+
+@media (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .toolbar-toggle-btn {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+}
