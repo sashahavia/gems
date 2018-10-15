@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-
-// import {Navbar} from './components'
 import Routes from './routes';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
@@ -20,6 +18,10 @@ class App extends Component {
     this.setState({sideDrawerOpen: false});
   };
 
+  drawerLinkClickHandler = () => {
+    this.setState({sideDrawerOpen: false});
+  };
+
   render() {
     let backdrop;
 
@@ -28,9 +30,11 @@ class App extends Component {
     }
     return (
       <div style={{height: '100%'}}>
-        {/* <Navbar /> */}
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-        <SideDrawer show={this.state.sideDrawerOpen} />
+        <SideDrawer
+          show={this.state.sideDrawerOpen}
+          click={this.drawerLinkClickHandler}
+        />
         {backdrop}
         <main style={{marginTop: '65px'}}>
           <Routes />

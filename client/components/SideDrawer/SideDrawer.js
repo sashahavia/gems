@@ -9,7 +9,7 @@ const sideDrawer = props => {
     drawerClasses = ['side-drawer', 'open'];
   }
   return (
-    <nav className={drawerClasses.join(' ')}>
+    <nav className={drawerClasses.join(' ')} onClick={props.click}>
       <Navitems />
     </nav>
   );
