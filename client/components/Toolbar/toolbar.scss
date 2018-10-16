@@ -1,6 +1,7 @@
 $nav_text: #333;
 $nav_test_color: #999999;
 $nav_teal: #008081;
+$nav_white: white;
 
 @mixin box-shadow($top, $left, $blur, $size, $color) {
   -webkit-box-shadow: $top $left $blur $size $color;
@@ -16,7 +17,7 @@ $nav_teal: #008081;
   top: 0;
   left: 0;
   @include box-shadow(2px, 2px, 5px, 0, rgba(0, 0, 0, 0.6));
-  // background: $nav_test_color;
+  background: $nav_white;
 }
 
 .toolbar-navigation {

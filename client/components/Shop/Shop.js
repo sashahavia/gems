@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchProducts} from '../../store/products';
+import ListProductView from './ListProductView';
+
+import './Shop.scss';
 
 class Shop extends Component {
   componentDidMount() {
@@ -11,18 +14,10 @@ class Shop extends Component {
     return (
       <div className="shop-main">
         <h2>Shop</h2>
-        <div>
+        <div className="product-list">
           <ul>
             {products.map(product => (
-              <li key={product.id}>
-                <img src={product.photos[0].image} />
-                <h4>{product.title}</h4>
-                <p>{product.description}</p>
-                <p>{product.size}</p>
-                <p>{product.color}</p>
-                <p>{product.stock}</p>
-                <p>{product.price}</p>
-              </li>
+              <ListProductView product={product} key={product.id} />
             ))}
           </ul>
         </div>
