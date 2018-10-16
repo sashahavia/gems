@@ -4,31 +4,31 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {logout} from '../../store';
 
-const navItems = ({handleClick, isLoggedIn}) => (
-  <div>
-    {isLoggedIn ? (
+const navItems = ({handleClick, isLoggedIn}) => {
+  let navitem1, navitem2;
+  if (isLoggedIn) {
+    navitem1 = <Link to="/home">My Account</Link>;
+    navitem2 = (
+      <a href="#" onClick={handleClick}>
+        Logout
+      </a>
+    );
+  } else {
+    navitem1 = <Link to="/login">Login</Link>;
+    navitem2 = <Link to="/signup">Sign Up</Link>;
+  }
+  return (
+    <div>
       <ul>
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/shop">Shop</Link>
         </li>
-        <li>
-          <a href="#" onClick={handleClick}>
-            Logout
-          </a>
-        </li>
+        <li>{navitem1}</li>
+        <li>{navitem2}</li>
       </ul>
-    ) : (
-      <ul>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/signup">Sign Up</Link>
-        </li>
-      </ul>
-    )}
-  </div>
-);
+    </div>
+  );
+};
 
 /**
  * CONTAINER

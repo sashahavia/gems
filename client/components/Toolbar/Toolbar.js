@@ -1,6 +1,7 @@
 import React from 'react';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import Navitems from './Navitems';
+import {Link} from 'react-router-dom';
 
 import './toolbar.scss';
 
@@ -11,7 +12,7 @@ const toolbar = props => (
         <DrawerToggleButton click={props.drawerClickHandler} />
       </div>
       <div className="logo">
-        <a href="/">Gems</a>
+        <Link to="/">Gems</Link>
       </div>
       <div className="spacer" />
       <div className="nav-items">
@@ -22,30 +23,3 @@ const toolbar = props => (
 );
 
 export default toolbar;
-
-// /**
-//  * CONTAINER
-//  */
-// const mapState = state => {
-//   return {
-//     isLoggedIn: !!state.user.id
-//   };
-// };
-
-// const mapDispatch = dispatch => {
-//   return {
-//     handleClick() {
-//       dispatch(logout());
-//     }
-//   };
-// };
-
-// export default connect(mapState, mapDispatch)(toolbar);
-
-// /**
-//  * PROP TYPES
-//  */
-// toolbar.propTypes = {
-//   handleClick: PropTypes.func.isRequired,
-//   isLoggedIn: PropTypes.bool.isRequired
-// };
