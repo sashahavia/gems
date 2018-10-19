@@ -1,16 +1,18 @@
 import React from 'react';
 
 const ListProductView = ({product}) => (
-  <li>
+  <div id="list-item">
+    <div className="list-image">
+      <img attr={product.title} src={product.photos[0].image} />
+    </div>
     <div className="list-content">
-      <img src={product.photos[0].image} />
       <h4>{product.title}</h4>
       <p>$ {product.price}</p>
       <button type="submit" className="btn-add-to-cart">
         ADD TO CART
       </button>
     </div>
-  </li>
+  </div>
 );
 
 export default ListProductView;

@@ -15,11 +15,11 @@ class Shop extends Component {
       <div className="shop-main">
         <h2>Shop</h2>
         <div className="product-list">
-          <ul>
+          <div className="list">
             {products.map(product => (
               <ListProductView product={product} key={product.id} />
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     );
