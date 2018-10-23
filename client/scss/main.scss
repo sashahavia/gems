@@ -1,10 +1,18 @@
 @import 'normalize';
 
+$favicon_color: #00ac9f;
+
 html {
-  height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
   font-family: 'Arapey', serif;
-  height: 100%;
+  margin: 0;
+}
+
+#container {
+  padding: 0.5em;
+  margin: 0 auto 10% auto;
 }

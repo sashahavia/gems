@@ -3,6 +3,8 @@ import Routes from './routes';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import Footer from './components/Footer/Footer';
+
 class App extends Component {
   state = {
     sideDrawerOpen: false
@@ -36,9 +38,10 @@ class App extends Component {
           click={this.drawerLinkClickHandler}
         />
         {backdrop}
-        <main style={{marginTop: '65px'}}>
+        <main id="container" style={{marginTop: '35px'}}>
           <Routes />
         </main>
+        <Footer />
       </div>
     );
   }

@@ -1,0 +1,18 @@
+$footer_bg: #81d8d0;
+$border_color: #008081;
+
+$footer_bg2: #20acaf;
+$border_color2: #008eac;
+
+#footer {
+  background: $footer_bg2;
+  -webkit-transition: all 350ms ease;
+  -moz-transition: all 350ms ease;
+  transition: all 350ms ease;
+  border-top: 1px solid $border_color2;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

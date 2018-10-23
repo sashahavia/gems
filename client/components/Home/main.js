@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Main = props => (
+const Home = props => (
   <div>
     <h1>Main</h1>
   </div>
 );
 
-export default Main;
+export default Home;
